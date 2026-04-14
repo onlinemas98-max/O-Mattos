@@ -3,497 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omattos Refrigeração | Assistência Técnica RJ</title>
-    <meta name="description" content="Conserto de geladeira, freezer, ar-condicionado e máquina de lavar em Niterói, São Gonçalo e Itaboraí. Até 1 ano de garantia.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <title>Site Indisponível</title>
 
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .modal-active { overflow: hidden; }
-        #service-modal { display: none; }
-        #service-modal.active { display: flex; }
-        
-        /* Animações de entrada */
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
 
-        /* Header no Scroll */
-        .header-scrolled { background-color: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); padding: 0.5rem 0; }
-        
-        /* Ajuste para o menu mobile */
-        @media (min-width: 768px) {
-            #mobile-menu { display: none !important; }
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 520px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 16px;
+        }
+
+        .status {
+            margin-top: 20px;
+            color: #e74c3c;
+            font-weight: bold;
         }
     </style>
 </head>
-<body class="bg-white text-slate-800 selection:bg-sky-100 selection:text-sky-900">
 
-    <!-- Header / Navbar -->
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <div class="flex items-center gap-2">
-                <i data-lucide="snowflake" class="text-sky-500 w-8 h-8"></i>
-                <span class="text-xl font-bold tracking-tight text-sky-600">
-                    Omattos <span class="text-slate-700">Refrigeração</span>
-                </span>
-            </div>
+<body>
 
-            <nav class="hidden md:flex items-center gap-8 font-medium">
-                <a href="#servicos" class="hover:text-sky-500 transition-colors">Serviços</a>
-                <a href="#vantagens" class="hover:text-sky-500 transition-colors">Vantagens</a>
-                <a href="#contato" class="hover:text-sky-500 transition-colors">Contato</a>
-                <a href="https://wa.me/5521990449661" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full flex items-center gap-2 transition-all shadow-sm">
-                    <i data-lucide="message-circle" class="w-5 h-5"></i> WhatsApp
-                </a>
-            </nav>
-
-            <button id="menu-toggle-btn" class="md:hidden text-slate-700 p-2 focus:outline-none">
-                <i data-lucide="menu" class="w-7 h-7"></i>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden bg-white border-t border-slate-100 absolute top-full left-0 right-0 shadow-2xl p-6 flex flex-col gap-4 z-50">
-            <a href="#servicos" class="mobile-link py-3 text-lg font-semibold border-b border-slate-50">Serviços</a>
-            <a href="#vantagens" class="mobile-link py-3 text-lg font-semibold border-b border-slate-50">Vantagens</a>
-            <a href="#contato" class="mobile-link py-3 text-lg font-semibold border-b border-slate-50">Contato</a>
-            <a href="https://wa.me/5521990449661" target="_blank" class="bg-green-500 text-white p-4 rounded-xl flex justify-center items-center gap-3 font-bold shadow-lg">
-                <i data-lucide="message-circle" class="w-6 h-6"></i> Chamar no WhatsApp
-            </a>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
-        <div class="absolute top-0 right-0 -z-10 w-1/2 h-full bg-sky-50 rounded-bl-[100px] hidden lg:block"></div>
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2 text-center lg:text-left fade-in visible">
-                    <span class="inline-block px-4 py-1 bg-sky-100 text-sky-600 rounded-full text-sm font-bold uppercase tracking-wider mb-6">
-                        Atendimento em Niterói, São Gonçalo e Itaboraí
-                    </span>
-                    <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight mb-6">
-                        Olá! Somos da <span class="text-sky-500">O’Mattos Refrigeração</span>, especialistas em refrigeração.
-                    </h1>
-                    <p class="text-lg text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 whitespace-pre-line">
-                        Queremos sempre prestar o melhor serviço e para que isso aconteça, estamos sempre atualizando nossos profissionais. 
-
-                        Em nossa empresa damos ao cliente <strong>até 1 ano de garantia</strong>. 
-
-                        Chega de sofrimento e demora para conserto de máquina de lavar, geladeira, ar-condicionado e freezer. Faça já o seu orçamento conosco e resolva seu problema!
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="https://wa.me/5521990449661?text=Olá! Gostaria de solicitar um orçamento." target="_blank" class="bg-green-500 hover:bg-green-600 text-white text-lg font-bold px-8 py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg transition-all transform hover:-translate-y-1">
-                            <i data-lucide="message-circle" class="w-6 h-6"></i> Chamar no WhatsApp
-                        </a>
-                        <a href="#servicos" class="bg-white border-2 border-slate-200 hover:border-sky-500 text-slate-700 hover:text-sky-500 text-lg font-bold px-8 py-4 rounded-xl transition-all flex items-center justify-center">
-                            Ver Serviços
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 relative fade-in visible">
-                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-                        <img src="https://i.postimg.cc/5Ng7Bdst/16-1.webp" alt="Técnico Daniel" class="w-full h-auto object-cover" referrerPolicy="no-referrer">
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 z-20 bg-white p-4 rounded-2xl shadow-xl flex items-center gap-4 border border-slate-100">
-                        <div class="bg-sky-500 p-3 rounded-xl text-white">
-                            <i data-lucide="shield-check" class="w-8 h-8"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-500 font-bold uppercase">Garantia de</p>
-                            <p class="text-xl font-bold text-slate-800">Até 1 Ano</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="servicos" class="py-24 bg-slate-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nossos Serviços</h2>
-                <div class="w-20 h-1.5 bg-sky-500 mx-auto rounded-full mb-6"></div>
-                <p class="text-slate-600 max-w-2xl mx-auto">Soluções completas para seus equipamentos de refrigeração e lavanderia.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Geladeira -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group fade-in">
-                    <div class="text-sky-500 mb-6 bg-sky-50 w-16 h-16 flex items-center justify-center rounded-2xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                        <i data-lucide="refrigerator" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Geladeira</h3>
-                    <p class="text-slate-600 mb-6">Reparos em todas as marcas e modelos, nacionais e importadas.</p>
-                    <button onclick="openModal('geladeira')" class="text-sky-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                        Saiba mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                    </button>
-                </div>
-                <!-- Freezer -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group fade-in">
-                    <div class="text-sky-500 mb-6 bg-sky-50 w-16 h-16 flex items-center justify-center rounded-2xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                        <i data-lucide="snowflake" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Freezer</h3>
-                    <p class="text-slate-600 mb-6">Manutenção em freezers verticais e horizontais de todas as marcas.</p>
-                    <button onclick="openModal('freezer')" class="text-sky-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                        Saiba mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                    </button>
-                </div>
-                <!-- Ar Condicionado -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group fade-in">
-                    <div class="text-sky-500 mb-6 bg-sky-50 w-16 h-16 flex items-center justify-center rounded-2xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                        <i data-lucide="thermometer" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Ar-Condicionado</h3>
-                    <p class="text-slate-600 mb-6">Limpeza completa, carga de gás e reparos elétricos em geral.</p>
-                    <button onclick="openModal('ar')" class="text-sky-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                        Saiba mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                    </button>
-                </div>
-                <!-- Máquina de Lavar -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-xl transition-all group fade-in">
-                    <div class="text-sky-500 mb-6 bg-sky-50 w-16 h-16 flex items-center justify-center rounded-2xl group-hover:bg-sky-500 group-hover:text-white transition-colors">
-                        <i data-lucide="droplets" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3">Máquina de Lavar</h3>
-                    <p class="text-slate-600 mb-6">Manutenção completa em lavadoras de todas as marcas e modelos.</p>
-                    <button onclick="openModal('lavar')" class="text-sky-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                        Saiba mais <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advantages Section -->
-    <section id="vantagens" class="py-24">
-        <div class="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-16">
-            <div class="lg:w-1/2 fade-in">
-                <img src="https://i.postimg.cc/4yJvynkY/18.jpg" alt="Técnico Daniel" class="rounded-3xl shadow-2xl w-full object-cover" referrerPolicy="no-referrer">
-            </div>
-            <div class="lg:w-1/2 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Por que nos escolher?</h2>
-                <div class="space-y-6">
-                    <div class="flex gap-4">
-                        <div class="bg-sky-100 text-sky-600 p-3 rounded-xl h-fit">
-                            <i data-lucide="clock" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-900">Atendimento Rápido</h4>
-                            <p class="text-slate-600">Atendemos com agilidade no mesmo dia em Niterói, São Gonçalo e Itaboraí.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="bg-sky-100 text-sky-600 p-3 rounded-xl h-fit">
-                            <i data-lucide="wrench" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-900">Técnicos Especializados</h4>
-                            <p class="text-slate-600">Equipe treinada e experiente em todas as marcas do mercado.</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-4">
-                        <div class="bg-sky-100 text-sky-600 p-3 rounded-xl h-fit">
-                            <i data-lucide="shield-check" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-900">Garantia no Serviço</h4>
-                            <p class="text-slate-600">Garantia formal de até 1 ano em peças e mão de obra.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Como Funciona Section -->
-    <section id="como-funciona" class="py-24 bg-sky-600 text-white text-center">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-16 fade-in">Como Funciona?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="fade-in">
-                    <div class="w-16 h-16 bg-white text-sky-600 rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-lg">1</div>
-                    <h3 class="text-xl font-bold mb-3">Entre em contato</h3>
-                    <p class="text-sky-100">Explique o problema pelo WhatsApp ou telefone.</p>
-                </div>
-                <div class="fade-in" style="transition-delay: 0.1s;">
-                    <div class="w-16 h-16 bg-white text-sky-600 rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-lg">2</div>
-                    <h3 class="text-xl font-bold mb-3">Agendamos a visita</h3>
-                    <p class="text-sky-100">Escolha o melhor horário para receber nosso técnico.</p>
-                </div>
-                <div class="fade-in" style="transition-delay: 0.2s;">
-                    <div class="w-16 h-16 bg-white text-sky-600 rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-6 shadow-lg">3</div>
-                    <h3 class="text-xl font-bold mb-3">Serviço realizado</h3>
-                    <p class="text-sky-100">Conserto rápido com peças originais e garantia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Expertise Section -->
-    <section class="py-24 bg-slate-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row-reverse items-center gap-16">
-                <div class="lg:w-1/2 grid grid-cols-2 gap-4 fade-in">
-                    <img src="https://i.postimg.cc/4yJvynkY/18.jpg" alt="Expertise 1" class="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover" referrerPolicy="no-referrer">
-                    <img src="https://i.postimg.cc/dVdFQ0qS/4-(1).jpg" alt="Expertise 2" class="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover mt-8" referrerPolicy="no-referrer">
-                    <img src="https://i.postimg.cc/W4wPrfqr/5-(1).jpg" alt="Expertise 3" class="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover -mt-8" referrerPolicy="no-referrer">
-                    <img src="https://i.postimg.cc/3NdMs8SN/6-1.webp" alt="Expertise 4" class="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover" referrerPolicy="no-referrer">
-                </div>
-                <div class="lg:w-1/2 fade-in">
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Expertise em Diversas Marcas</h2>
-                    <p class="text-lg text-slate-600 mb-8">
-                        Nossa equipe está preparada para lidar com as tecnologias mais avançadas do mercado. De geladeiras side-by-side a máquinas de lavar digitais.
-                    </p>
-                    <ul class="grid grid-cols-2 gap-4">
-                        <li class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i> Brastemp</li>
-                        <li class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i> Consul</li>
-                        <li class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i> Electrolux</li>
-                        <li class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i> Samsung</li>
-                        <li class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i> LG</li>
-                        <li class="flex items-center gap-2 font-bold text-slate-700"><i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i> Panasonic</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="py-24">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Serviços Realizados</h2>
-                <div class="w-20 h-1.5 bg-sky-500 mx-auto rounded-full mb-6"></div>
-                <p class="text-slate-600 max-w-2xl mx-auto">Confira alguns de nossos atendimentos recentes em Niterói, São Gonçalo e Itaboraí.</p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 fade-in">
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/4yJvynkY/18.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/MGDhXMgn/8-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/4N9qVFjD/9-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/qRFDC8wZ/10-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/YSsT1Kqz/11-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/SxQP3Nnr/12-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/VvcGRYyc/14-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/5Ng7Bdst/16-1.webp" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/7ZcN9x06/17.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/4yJvynkY/18.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/KcNrV7BQ/19.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-                <div class="aspect-square rounded-2xl overflow-hidden shadow-md group relative">
-                    <img src="https://i.postimg.cc/cLKRrVj3/20.jpg" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contato" class="py-24 bg-slate-50">
-        <div class="container mx-auto px-4 flex flex-col lg:flex-row gap-16">
-            <div class="lg:w-1/2 fade-in">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-8">Fale Conosco</h2>
-                <div class="space-y-8">
-                    <div class="flex items-start gap-4">
-                        <div class="bg-sky-50 p-4 rounded-2xl text-sky-600">
-                            <i data-lucide="phone" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm text-slate-500 font-bold uppercase">Telefone</p>
-                            <p class="text-xl font-bold text-slate-800">(21) 99044-9661</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="bg-green-50 p-4 rounded-2xl text-green-600">
-                            <i data-lucide="message-circle" class="w-6 h-6"></i>
-                        </div>
-                        <div>
-                            <p class="text-sm text-slate-500 font-bold uppercase">WhatsApp</p>
-                            <p class="text-xl font-bold text-slate-800">(21) 99044-9661</p>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://wa.me/5521990449661?text=Olá! Gostaria de um orçamento grátis." target="_blank" class="mt-12 inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold px-10 py-5 rounded-2xl shadow-xl text-lg transition-all transform hover:scale-105">
-                    <i data-lucide="message-circle" class="w-6 h-6"></i> Solicitar Orçamento Grátis
-                </a>
-            </div>
-            <div class="lg:w-1/2 h-[400px] rounded-3xl overflow-hidden shadow-inner border relative fade-in">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235214.5264010166!2d-43.58606785!3d-22.91388505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f58a6a00a9d%3A0x3f251d85272f76f!2sRio%20de%20Janeiro%2C%20RJ!5e0!3m2!1spt-BR!2sbr!4v1710580000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border: 0" allowfullscreen loading="lazy" title="Mapa Rio de Janeiro"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-100 py-12 border-t text-center">
-        <div class="container mx-auto px-4">
-            <p class="font-bold text-sky-600 mb-2">Omattos Refrigeração</p>
-            <p class="text-slate-500 text-sm">&copy; 2026 Todos os direitos reservados. Niterói, São Gonçalo e Itaboraí</p>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5521990449661" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition-all transform hover:scale-110 active:scale-90">
-        <i data-lucide="message-circle" class="w-8 h-8"></i>
-    </a>
-
-    <!-- Service Modal -->
-    <div id="service-modal" class="fixed inset-0 z-[100] items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-        <div class="bg-white rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl">
-            <div class="bg-sky-500 p-6 text-white flex justify-between items-center">
-                <h3 id="modal-title" class="text-2xl font-bold">Título do Serviço</h3>
-                <button onclick="closeModal()" class="hover:bg-white/20 p-2 rounded-full transition-colors">
-                    <i data-lucide="x" class="w-6 h-6"></i>
-                </button>
-            </div>
-            <div class="p-8">
-                <p id="modal-desc" class="text-slate-600 mb-6 text-lg">Descrição do serviço.</p>
-                <h4 class="font-bold text-slate-900 mb-4 flex items-center gap-2">
-                    <i data-lucide="check-circle" class="text-sky-500 w-5 h-5"></i> O que realizamos:
-                </h4>
-                <ul id="modal-list" class="space-y-3 mb-8 text-slate-700">
-                    <!-- Itens dinâmicos -->
-                </ul>
-                <a id="modal-whatsapp" href="#" target="_blank" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg transition-transform active:scale-95">
-                    <i data-lucide="message-circle" class="w-6 h-6"></i> Solicitar este serviço agora
-                </a>
-            </div>
-        </div>
+<div class="container">
+    <h1>⚠️ Site Temporariamente Fora do Ar</h1>
+    
+    <p>Este site encontra-se temporariamente indisponível devido à falta de pagamento da mensalidade de hospedagem/manutenção.</p>
+    
+    <p>O serviço será restabelecido automaticamente após a regularização.</p>
+    
+    <div class="status">
+        Para mais informações, entre em contato com o responsável pelo site.
     </div>
+</div>
 
-    <script>
-        // Inicializar ícones Lucide
-        lucide.createIcons();
-
-        // Dados dos serviços para o Modal
-        const servicesData = {
-            geladeira: {
-                title: "Conserto de Geladeira",
-                desc: "Reparos em todas as marcas e modelos, nacionais e importadas.",
-                details: ["Troca de borracha", "Recarga de gás", "Troca de motor", "Conserto de placa", "Desobstrução de dreno"]
-            },
-            freezer: {
-                title: "Conserto de Freezer",
-                desc: "Manutenção em freezers verticais e horizontais de todas as marcas.",
-                details: ["Reparo em degelo", "Troca de termostato", "Solda em tubulação", "Limpeza técnica", "Troca de sensores"]
-            },
-            ar: {
-                title: "Ar-Condicionado",
-                desc: "Limpeza completa, carga de gás e reparos elétricos em geral.",
-                details: ["Higienização completa", "Verificação de vazamentos", "Carga de gás", "Troca de capacitores", "Limpeza de filtros"]
-            },
-            lavar: {
-                title: "Máquina de Lavar",
-                desc: "Manutenção completa em lavadoras de todas as marcas e modelos.",
-                details: ["Troca de placa", "Reparo mecânico", "Limpeza interna", "Troca de bomba", "Nivelamento"]
-            }
-        };
-
-        // Funções do Modal
-        function openModal(key) {
-            const data = servicesData[key];
-            document.getElementById('modal-title').innerText = data.title;
-            document.getElementById('modal-desc').innerText = data.desc;
-            
-            const list = document.getElementById('modal-list');
-            list.innerHTML = '';
-            data.details.forEach(item => {
-                const li = document.createElement('li');
-                li.className = 'flex items-center gap-3';
-                li.innerHTML = `<div class="w-1.5 h-1.5 bg-sky-400 rounded-full"></div> ${item}`;
-                list.appendChild(li);
-            });
-
-            document.getElementById('modal-whatsapp').href = `https://wa.me/5521990449661?text=Olá! Gostaria de um orçamento para: ${data.title}`;
-            
-            document.getElementById('service-modal').classList.add('active');
-            document.body.classList.add('modal-active');
-        }
-
-        function closeModal() {
-            document.getElementById('service-modal').classList.remove('active');
-            document.body.classList.remove('modal-active');
-        }
-
-        // Menu Mobile Toggle
-        const menuBtn = document.getElementById('menu-toggle-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        function toggleMenu() {
-            mobileMenu.classList.toggle('hidden');
-        }
-
-        menuBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
-
-        // Fechar menu ao clicar em um link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Fechar menu ao clicar fora
-        document.addEventListener('click', (e) => {
-            if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-                mobileMenu.classList.add('hidden');
-            }
-        });
-
-        // Efeito de Scroll no Header e Animações Fade-In
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 50) {
-                header.classList.add('header-scrolled');
-                header.classList.remove('py-4');
-            } else {
-                header.classList.remove('header-scrolled');
-                header.classList.add('py-4');
-            }
-
-            // Animação de Fade-in ao rolar
-            document.querySelectorAll('.fade-in').forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 50) {
-                    el.classList.add('visible');
-                }
-            });
-        });
-
-        // Trigger inicial para elementos que já estão na tela
-        window.dispatchEvent(new Event('scroll'));
-    </script>
 </body>
 </html>
